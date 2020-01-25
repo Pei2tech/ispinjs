@@ -216,6 +216,8 @@ class ISpin {
 
   spin (step: number) {
     this.value = this.adjustValue(this.wrapValue(this.value + step));
+    // new add for trigger event 2020/01/25
+    this.el.dispatchEvent(new Event('change', { 'bubbles': true }));
   }
 }
 ISpin.DEFAULTS = {
