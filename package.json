@@ -34,8 +34,8 @@
   },
   "scripts": {
     "watch": "rollup -c -w",
-    "build": "npm run build:dev && npm run build:prod && npm run css",
-    "build:dev": "npm run build:dev:es && npm run build:dev:umd",
+    "build": "npm run build:dev && npm run css",
+    "build:dev": "npm run build:dev:umd",
     "build:prod": "npm run build:prod:es && npm run build:prod:umd",
     "build:dev:es": "rollup -c --environment format:es",
     "build:dev:umd": "rollup -c --environment format:umd",
